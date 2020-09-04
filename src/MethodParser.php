@@ -6,8 +6,8 @@ use ReflectionException;
 use ReflectionFunction;
 use ReflectionNamedType;
 use ReflectionParameter;
-use UnexpectedValueException;
 use function str_contains;
+use UnexpectedValueException;
 
 class MethodParser
 {
