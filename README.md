@@ -35,6 +35,8 @@ When ran, the script does the following:
 - Parse all method details using reflection (name, parameters & types, return type etc.)
 - Generate an [PHPDocumentor-compatible `_ide_helpers.php` file](https://manual.phpdoc.org/HTMLSmartyConverter/PHP/phpDocumentor/tutorial_tags.method.pkg.html)
 
+This is, without a doubt, the most disgusting, hacky piece of code that I knowingly published on Github.
+
 ## Testing
 
 ``` bash
