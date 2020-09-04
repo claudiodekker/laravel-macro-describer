@@ -2,11 +2,11 @@
 
 namespace ClaudioDekker\MacroDescriber;
 
+use Illuminate\Support\Str;
 use ReflectionException;
 use ReflectionFunction;
 use ReflectionNamedType;
 use ReflectionParameter;
-use function str_contains;
 use UnexpectedValueException;
 
 class MethodParser
@@ -104,10 +104,10 @@ class MethodParser
         }
 
         if (is_string($value)) {
-            $singleQuote = str_contains($value, "'");
-            $doubleQuote = str_contains($value, '"');
-            $escapedSingleQuote = str_contains($value, "\'");
-            $escapedDoubleQuote = str_contains($value, '\"');
+            $singleQuote = Str::contains($value, "'");
+            $doubleQuote = Str::contains($value, '"');
+            $escapedSingleQuote = Str::contains($value, "\'");
+            $escapedDoubleQuote = Str::contains($value, '\"');
 
             if ($singleQuote && (! $doubleQuote || $escapedDoubleQuote)) {
                 return '"'.$value.'"';
