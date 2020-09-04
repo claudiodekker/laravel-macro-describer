@@ -155,9 +155,15 @@ class Generator extends Command
      */
     protected function generateIdeHelper(Collection $macros): string
     {
-        return view('macro-describer::_ide_helpers', [
+        $response = view('macro-describer::_ide_helpers', [
             'macros' => $macros,
         ])->render();
+
+        if (is_array($response)) {
+            return '';
+        }
+
+        return $response;
     }
 
     /**
