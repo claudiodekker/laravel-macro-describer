@@ -1,0 +1,59 @@
+{
+    "name": "claudiodekker/laravel-macro-describer",
+    "description": "Automatically generate IDE autocompletion helpers for Laravel macros/mixins.",
+    "keywords": [
+        "claudiodekker",
+        "laravel",
+        "mixin",
+        "documenter",
+        "describer",
+        "generate",
+        "docblocks",
+        "helpers",
+        "ide",
+        "autocompletion"
+    ],
+    "homepage": "https://github.com/claudiodekker/laravel-macro-describer",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Claudio Dekker",
+            "email": "claudio@ubient.net",
+            "homepage": "https://dekker.io",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "laravel/framework": "^6.0|^7.0|^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0|^5.0|^6.0",
+        "phpunit/phpunit": "^8.0|^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ClaudioDekker\\MacroDescriber\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ClaudioDekker\\MacroDescriber\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ClaudioDekker\\MacroDescriber\\MacroDescriberServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
