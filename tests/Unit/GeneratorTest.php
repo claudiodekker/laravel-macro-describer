@@ -18,10 +18,10 @@ class GeneratorTest extends TestCase
     /** @test */
     public function it_generates_ide_helpers_for_all_registered_macros(): void
     {
-        self::assertFileDoesNotExist($this->package_path('_ide_helpers.php'));
+        self::assertFalse(file_exists($this->package_path('_ide_helpers.php')));
 
         $this->artisan('macro:generate-helpers');
 
-        self::assertFileExists($this->package_path('_ide_helpers.php'));
+        self::assertTrue(file_exists($this->package_path('_ide_helpers.php')));
     }
 }
